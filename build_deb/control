@@ -1,0 +1,12 @@
+Package: gcloud
+Version: 1.1-1
+Architecture: all
+Maintainer: LiuLang<gsushzhsosgsu@gmail.com>
+Installed-Size: 1720
+Depends: python3-gi, gnome-icon-theme-symbolic, python3-urllib3
+Section: gnome
+Priority: optional
+Homepage: https://github.com/LiuLang/gcloud
+Description: Baidu Pan client for linux users
+ Alternative client of Baidu Pan (Baidu Personal Cloud) for linux desktop 
+ users.
