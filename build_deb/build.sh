@@ -18,7 +18,7 @@ PYLIB='fakeroot/usr/lib/python3/dist-packages/'
 
 mkdir -vp fakeroot/usr/bin fakeroot/DEBIAN $PYLIB
 
-cp -v "$SRC/gcloud.py" fakeroot/usr/bin/gcloud
+cp -v "$SRC/gcloud-gui" fakeroot/usr/bin/
 cp -rvf "$SRC/gcloud" $PYLIB/
 cp -rvf "$SRC/share" fakeroot/usr/share
 find fakeroot -type d -iname '__pycache__' | xargs rm -rf
