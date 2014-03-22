@@ -8,7 +8,7 @@
 %{!?python3_sitelib: %global python3_sitelib %(%{__python3} -c "from distutils.sysconfig import get_python3_lib; print(get_python3_lib())")}
 
 Name:           bcloud
-Version:        2.1.3
+Version:        2.1.4
 Release:        1%{?dist}
 Summary:        Baidu Pan client for Linux Desktop users
 
@@ -54,12 +54,11 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{python3_sitelib}/bcloud/__pycache__
 
 %post
-pushd /usr/lib/python3.3/site-packages/
-	for file in `ls|grep 'bcloud-[0-9]*\.[0-9]*\.[0-9]*-py3\.3\.egg-info'`
-	do
-		if [ $file != "bcloud-%{version}-py3.3.egg-info" ]
-		then
-			rm $file
-		fi
-	done
-popd
+for file in /usr/lib/python3.3/site-packages/bcloud*
+do
+	if [ -f $file ] && [ $file != "bcloud-%{version}-py3.3.egg-info" ]
+	then
+		rm $file
+	fi
+done
+
