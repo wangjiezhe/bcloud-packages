@@ -54,12 +54,11 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{python3_sitelib}/bcloud/__pycache__
 
 %post
-pushd /usr/lib/python3.3/site-packages/
-	for file in `ls|grep 'bcloud-[0-9]*\.[0-9]*\.[0-9]*-py3\.3\.egg-info'`
-	do
-		if [ $file != "bcloud-%{version}-py3.3.egg-info" ]
-		then
-			rm $file
-		fi
-	done
-popd
+for file in /usr/lib/python3.3/site-packages/bcloud*
+do
+	if [ -f $file ] && [ $file != "bcloud-%{version}-py3.3.egg-info" ]
+	then
+		rm $file
+	fi
+done
+
