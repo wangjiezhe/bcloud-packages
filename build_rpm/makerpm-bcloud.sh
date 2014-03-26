@@ -27,8 +27,8 @@ then
 fi
 
 # Replace these variables by your pathes
-GIT=PATH_TO_YOUR_SOURCE_DIR
-DEST=PATH_TO_YOUR_DEST_DIR
+GIT=$HOME/Downloads/github/wangjiezhe/bcloud
+DEST=$HOME/Downloads/github/wangjiezhe/bcloud-packages
 
 SOURCES=$HOME/rpmbuild/SOURCES
 SPECS=$HOME/rpmbuild/SPECS
@@ -36,7 +36,13 @@ RPMS=$HOME/rpmbuild/RPMS/noarch
 
 if [ ! -f $SPECS/bcloud.spec ]
 then
-	cp $PWD/bcloud.spec $SPECS
+	if [ -f $PWD/bcloud.spec ]
+	then
+		cp $PWD/bcloud.spec $SPECS
+	else
+		echo "No spec file found!"
+		exit 1
+	fi
 fi
 
 mkdir -p $SOURCES/bcloud-"$version"
