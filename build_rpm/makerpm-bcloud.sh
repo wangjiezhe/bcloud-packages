@@ -5,19 +5,45 @@
 if [ $# -ne 2 ]
 then
 	echo "Usage: `basename $0` version release"
-	exit 1
+	exit 2
 fi
 
 version=`echo $1 | sed "s/-/./g"`
 release=$2
 
-# Replace these variables by your pathes
-GIT=PATH_TO_YOUR_SOURCE_DIR
-DEST=PATH_TO_YOUR_DEST_DIR
+if [ ! -d  $HOME/rpmbuild/SPECS ]
+then
+	if [ -n "$(which rpmdev-setuptree)" ]
+	then
+		rpmdev-setuptree
+	else
+		echo "The command \`rpmdev-setuptree\` doesn't in your path.'"
+		echo "Please check you path or if your have installed package development tools."
+		echo "If not, install the core development tools:"
+		echo "yum install @development-tools"
+		echo "yum install fedora-packager"
+		exit 1
+	fi
+fi
 
-SOURCES=~/rpmbuild/SOURCES
-SPECS=~/rpmbuild/SPECS
-RPMS=~/rpmbuild/RPMS/noarch
+# Replace these variables by your pathes
+GIT=$HOME/Downloads/github/wangjiezhe/bcloud
+DEST=$HOME/Downloads/github/wangjiezhe/bcloud-packages
+
+SOURCES=$HOME/rpmbuild/SOURCES
+SPECS=$HOME/rpmbuild/SPECS
+RPMS=$HOME/rpmbuild/RPMS/noarch
+
+if [ ! -f $SPECS/bcloud.spec ]
+then
+	if [ -f $PWD/bcloud.spec ]
+	then
+		cp $PWD/bcloud.spec $SPECS
+	else
+		echo "No spec file found!"
+		exit 1
+	fi
+fi
 
 mkdir -p $SOURCES/bcloud-"$version"
 cd $GIT/
