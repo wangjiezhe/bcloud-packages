@@ -10,6 +10,9 @@ deb包就能安装了; 如果没有的话, 也可以在终端里面安装:
     $ sudo dpkg -i bcloud-x.x.x.deb
     $ sudo apt-get -f update
 
+ubuntu 12.04 的系统里没有python3-urllib3这个包, 请下载那个
+python3-urllib3-1.3-3-all.deb, 先安装它, 再安装bcloud就可以了.
+
 #Fedora系列
 Fedora 20的话, 请直接下载并安装bcloud-x.x..fc20.noarch.rpm, 它会自动解决所有
 依赖关系.
