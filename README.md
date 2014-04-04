@@ -17,6 +17,9 @@ python3-urllib3-1.3-3-all.deb, 先安装它, 再安装bcloud就可以了.
 Fedora 20的话, 请直接下载并安装bcloud-x.x..fc20.noarch.rpm, 它会自动解决所有
 依赖关系.
 
+#ArchLinux
+只需要bcloud-x.x.x-any.pkg.tar.xz这个包就够了.
+
 #OpenSuSE安装指南
 **适用于12.3及以上版本, factory用户可以尝试. 其他用户请等待obs服务**
 
