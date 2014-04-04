@@ -1,0 +1,26 @@
+# PKGBUILD for bcloud 2014-04-04
+# Contributor: MJsaka <qiuxuenan@gmail.com>
+# Copyright
+# This PKGBUILD released with the GPLv3 license
+
+pkgname=bcloud
+pkgver=2.2.2
+pkgrel=1
+pkgdesc='Baidu Pan client for Linux Desktop users'
+arch=('any')
+license=('GPL3')
+url="https://github.com/LiuLang/bcloud"
+depends=('python>=3' 'python-urllib3' 'python-gobject' 'gnome-icon-theme-symbolic' )
+optdepends=('python-keyring: Store and access your passwords safely.(Recommended)')
+source=("https://pypi.python.org/packages/source/b/bcloud/${pkgname}-${pkgver}.tar.gz")
+md5sums=('f84f663130ca9b4355335ded05cc9834')
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    python setup.py build
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    python setup.py install --root="$pkgdir"
+}
