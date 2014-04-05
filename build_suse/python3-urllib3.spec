@@ -15,24 +15,23 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%define python3_sitelib /usr/lib/python3.3/site-packages
-
 Name:           python3-urllib3
 Version:        1.8
 Release:        1.suse
 License:        MIT
-Summary:        HTTP library with thread-safe connection pooling, file post, and more.
+Summary:        HTTP library with thread-safe connection pooling, file post, and more
 Url:            https://pypi.python.org/pypi/urllib3
 Group:          Development/Languages/Python
 Source:         %{name}-%{version}.tar.bz2
 BuildArch:      noarch
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 Requires:       python3-base
 Obsoletes:      %{name} < %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
-HTTP library with thread-safe connection pooling, file post, and more.
+This package provides HTTP library with thread-safe connection pooling, file post, and more.
 
 %prep
 %setup -q
@@ -42,13 +41,12 @@ python3 setup.py build
 
 %install
 python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+# fix non-executable-script issues
+chmod a+x %{buildroot}%{python3_sitelib}/dummyserver/server.py
+chmod a+x %{buildroot}%{python3_sitelib}/dummyserver/proxy.py
 
 %clean
-rm -rf $RPM_BUILD_ROOT
-
-%post
-
-%postun
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -57,5 +55,3 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{python3_sitelib}/urllib3/__pycache__
 
 %changelog
-* Wed Mar 26 2014 qgymib <usrmib@163.com> 1.8-1.suse
-- Packaged by qgymib
