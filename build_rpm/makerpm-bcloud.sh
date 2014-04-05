@@ -4,14 +4,14 @@
 
 if [ $# -ne 2 ]
 then
-	echo "Usage: `basename $0` version release"
+	echo "Usage: $(basename "$0") version release"
 	exit 2
 fi
 
-version=`echo $1 | sed "s/-/./g"`
-release=$2
+version=${1//-/.}
+release="$2"
 
-if [ ! -d  $HOME/rpmbuild/SPECS ]
+if [ ! -d  "$HOME"/rpmbuild/SPECS ]
 then
 	if [ -n "$(which rpmdev-setuptree)" ]
 	then
@@ -27,39 +27,39 @@ then
 fi
 
 # Replace these variables by your pathes
-GIT=$HOME/Downloads/github/wangjiezhe/bcloud
-DEST=$HOME/Downloads/github/wangjiezhe/bcloud-packages
+GIT="$HOME"/Downloads/github/wangjiezhe/bcloud
+DEST="$HOME"/Downloads/github/wangjiezhe/bcloud-packages
 
-SOURCES=$HOME/rpmbuild/SOURCES
-SPECS=$HOME/rpmbuild/SPECS
-RPMS=$HOME/rpmbuild/RPMS/noarch
+SOURCES="$HOME"/rpmbuild/SOURCES
+SPECS="$HOME"/rpmbuild/SPECS
+RPMS="$HOME"/rpmbuild/RPMS/noarch
 
-if [ ! -f $SPECS/bcloud.spec ]
+if [ ! -f "$SPECS"/bcloud.spec ]
 then
-	if [ -f $PWD/bcloud.spec ]
+	if [ -f "$PWD"/bcloud.spec ]
 	then
-		cp $PWD/bcloud.spec $SPECS
+		cp "$PWD"/bcloud.spec "$SPECS"
 	else
 		echo "No spec file found!"
 		exit 1
 	fi
 fi
 
-mkdir -p $SOURCES/bcloud-"$version"
-cd $GIT/
-cp -vr HISTORY LICENSE README.md setup.py bcloud-gui bcloud po share $SOURCES/bcloud-"$version"
-# rm -rf $SOURCES/bcloud-$version/bcloud/__pycache__/
+mkdir -p "$SOURCES"/bcloud-"$version"
+cd "$GIT"/
+cp -vr HISTORY LICENSE README.md setup.py bcloud-gui bcloud po share "$SOURCES"/bcloud-"$version"
+# rm -rf "$SOURCES"/bcloud-$version/bcloud/__pycache__/
 
-cd $SOURCES/
-tar -cvzf bcloud-"$version".tar.gz bcloud-$version
-rm -rf bcloud-$version
+cd "$SOURCES"/
+tar -cvzf bcloud-"$version".tar.gz bcloud-"$version"
+rm -rf bcloud-"$version"
 
-cd $SPECS/
+cd "$SPECS"/
 sed -i "/^Version/s/[0-9]\+\.[0-9]\+\.[0-9]\+/$version/" bcloud.spec
 sed -i "/^Release/s/[0-9]\+/$release/" bcloud.spec
 rpmbuild -ba bcloud.spec
-cp bcloud.spec $DEST/build_rpm/
-# cp makerpm-bcloud.sh $DEST/build_rpm/
+cp bcloud.spec "$DEST"/build_rpm/
+# cp makerpm-bcloud.sh "$DEST"/build_rpm/
 
-cd $RPMS/
-cp bcloud-"$version"-"$release".fc20.noarch.rpm $DEST/
+cd "$RPMS"/
+cp bcloud-"$version"-"$release".fc20.noarch.rpm "$DEST"/
