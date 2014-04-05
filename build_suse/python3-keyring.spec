@@ -15,8 +15,6 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%define python3_sitelib /usr/lib/python3.3/site-packages
-
 Name:           python3-keyring
 Version:        3.7
 Release:        1.suse
@@ -27,8 +25,13 @@ Group:          Development/Languages/Python
 Source:         %{name}-%{version}.tar.bz2
 BuildArch:      noarch
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 Requires:       python3-base
+Provides:       python3-keyring-gnome = %{version}
+Provides:       python3-keyring-kde = %{version}
 Obsoletes:      %{name} < %{version}
+Obsoletes:      python3-keyring-gnome < %{version}
+Obsoletes:      python3-keyring-kde < %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
@@ -42,9 +45,11 @@ python3 setup.py build
 
 %install
 python3 setup.py install --skip-build --prefix=%{_prefix} --root=%{buildroot}
+# fix non-executable-script issues
+chmod a+x %{buildroot}%{python3_sitelib}/keyring/cli.py
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -54,6 +59,3 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{python3_sitelib}/keyring/__pycache__
 
 %changelog
-* Wed Mar 26 2014 qgymib <usrmib@163.com> 3.7-1
-- Packaged by qgymib
-
