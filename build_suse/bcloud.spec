@@ -16,7 +16,7 @@
 #
 
 Name:           bcloud
-Version:        2.2.4
+Version:        2.2.5
 Release:        1.suse
 License:        GPL-3.0
 Summary:        Baidu Pan client for Linux Desktop users
@@ -37,6 +37,7 @@ Requires:       python3-urllib3 >= 1.8
 Requires:       python3-keyring >= 3.7
 Requires:       sqlite3
 Requires:       gnome-icon-theme-symbolic
+Requires:       girepository-1_0
 Obsoletes:      %{name} < %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
