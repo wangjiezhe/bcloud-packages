@@ -1,7 +1,7 @@
 #
 # spec file for package bcloud
 #
-# Released by qgymib <qgymib@gmail.com>
+# Copyright (c) 2014 SUSE LINUX Products GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,14 +12,11 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via 
+# Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-# the {_libdir} can not be used under x64
-%define python3_sitelib /usr/lib/python3.3/site-packages
-
 Name:           bcloud
-Version:        2.2.3
+Version:        3.1.2
 Release:        1.suse
 License:        GPL-3.0
 Summary:        Baidu Pan client for Linux Desktop users
@@ -27,8 +24,12 @@ Url:            https://github.com/LiuLang/bcloud
 Group:          Productivity/Networking/Web/Frontends
 Source:         %{name}-%{version}.tar.bz2
 BuildArch:      noarch
+BuildRequires:  python3-setuptools
 BuildRequires:  python3-devel
-BuildRequires:  update-desktop-files
+BuildRequires:  python3-gobject
+BuildRequires:  gtk3-devel
+Requires:       update-desktop-files
+Requires:       gtk3-data >= 3.4.0
 Requires:       python3
 Requires:       python3-base
 Requires:       python3-gobject
@@ -36,21 +37,20 @@ Requires:       python3-urllib3 >= 1.8
 Requires:       python3-keyring >= 3.7
 Requires:       sqlite3
 Requires:       gnome-icon-theme-symbolic
+Requires:       girepository-1_0
 Obsoletes:      %{name} < %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
 bcloud 是百度网盘的Linux桌面客户端实现.
 现在只写了一部分主要功能, 其它功能还要等有空再加入.
-gloud 还处于早期的开发阶段, 欢迎各位朋友提交问题.
-
+bcloud 还处于早期的开发阶段, 欢迎各位朋友提交问题.
 
 %prep
 %setup -q
 
 %build
-# this python module shouldn't be compiled
-# we will place all the files to right position
+python3 setup.py build
 
 %install
 # {buildroot} should be cleaned before install installation
@@ -62,28 +62,21 @@ install bcloud-gui %{buildroot}%{_bindir}
 install -d %{buildroot}%{python3_sitelib}
 cp -r bcloud/ %{buildroot}%{python3_sitelib}
 # copy resources to /usr/share
-cp -r share/ %{buildroot}%{_datadir}
+cp -r share/ %{buildroot}%{_datadir}/
 
 %find_lang %{name}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
+%defattr(-,root,root)
 %doc LICENSE README.md HISTORY
 %{python3_sitelib}/*
-%{_datadir}/icons/*
-%{_datadir}/bcloud/*
-%{_bindir}/*
+%{_datadir}/bcloud
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/hicolor/*
+%{_bindir}/bcloud-gui
+%exclude %{python3_sitelib}/bcloud/__pycache__
 
 %changelog
-* Wed Mar 26 2014 qgymib <usrmib@163.com> 2.2.2-1.suse
-- Using keyring to encrypt account password
-- Support status icon
-
-* Wed Mar 26 2014 qgymib <usrmib@163.com> 2.2.3-1.suse
-- Fixed: saving download status when terminated
-- Automatically update user profile
-- Support restroing files in Trash
-- Add more comments to README
