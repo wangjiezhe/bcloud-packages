@@ -16,8 +16,8 @@
 #
 
 Name:           bcloud
-Version:        3.1.2
-Release:        1.suse
+Version:        3.1.3
+Release:        1%{?dist}
 License:        GPL-3.0
 Summary:        Baidu Pan client for Linux Desktop users
 Url:            https://github.com/LiuLang/bcloud
@@ -38,6 +38,7 @@ Requires:       python3-keyring >= 3.7
 Requires:       sqlite3
 Requires:       gnome-icon-theme-symbolic
 Requires:       girepository-1_0
+Requires:       libnotify4
 Obsoletes:      %{name} < %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
