@@ -1,8 +1,8 @@
 Package: bcloud
-Version: 3.3.2-2
+Version: 3.3.2-3
 Architecture: all
 Maintainer: LiuLang<gsushzhsosgsu@gmail.com>
-Installed-Size: 728
+Installed-Size: 732
 Depends: python3-gi, python3-dbus, gnome-icon-theme-symbolic, gir1.2-notify-0.7, python3-keyring, gir1.2-gtk-3.0
 Section: gnome
 Priority: optional
