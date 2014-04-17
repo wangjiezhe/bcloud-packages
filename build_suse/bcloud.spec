@@ -39,6 +39,7 @@ Requires:       sqlite3
 Requires:       gnome-icon-theme-symbolic
 Requires:       girepository-1_0
 Requires:       libnotify4
+Requires:       dbus-1-python3
 Obsoletes:      %{name} < %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
