@@ -8,7 +8,7 @@
 %{!?python3_sitelib: %global python3_sitelib %(%{__python3} -c "from distutils.sysconfig import get_python3_lib; print(get_python3_lib())")}
 
 Name:           bcloud
-Version:        3.3.2
+Version:        3.3.3
 Release:        2%{?dist}
 Summary:        Baidu Pan client for Linux Desktop users
 
@@ -22,6 +22,9 @@ BuildRequires:  python3-devel
 Requires:  python3-gobject
 Requires:  python3-urllib3
 Requires:  gnome-icon-theme-symbolic
+Requires:  python3-keyring
+Requires:  python3-dbus
+Requires:  libnotify
 
 %description
 
