@@ -10,8 +10,7 @@ pkgdesc='Baidu Pan client for Linux Desktop users'
 arch=('any')
 license=('GPL3')
 url="https://github.com/LiuLang/bcloud"
-depends=('python>=3' 'python-urllib3' 'python-gobject' 'gnome-icon-theme-symbolic' )
-optdepends=('python-keyring: Store and access your passwords safely.(Recommended)')
+depends=('python>=3' 'python-urllib3' 'python-gobject' 'gnome-icon-theme-symbolic' 'python-keyring')
 source=("https://pypi.python.org/packages/source/b/bcloud/${pkgname}-${pkgver}.tar.gz")
 md5sums=('61b7d4f49ce22dfc12bd148f11858828')
 
