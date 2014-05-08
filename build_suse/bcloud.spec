@@ -16,7 +16,7 @@
 #
 
 Name:           bcloud
-Version:        3.3.4
+Version:        3.3.5
 Release:        1%{?dist}
 License:        GPL-3.0
 Summary:        Baidu Pan client for Linux Desktop users
