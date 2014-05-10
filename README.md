@@ -3,6 +3,11 @@
 这个项目只包含[bcloud](https://github.com/LiuLang/bcloud)的安装包,
 以方便各位朋友使用.
 
+请在下载到安装包之后, 先检验一下包的完整性. 有可能会下载的不完整, 最近至少
+有两位朋友遇到了这类问题. 可以使用 `$ md5sum bcloud-x.x.x` 来计算下载的安装
+包的MD5值, 与 [checksum.txt](checksum.txt) 里面的文件MD5值比较, 如果匹配就
+没有问题.
+
 #Debian系列
 请直接下载bcloud-x.x.x.deb这个包, 安装时如果系统里面有gdebi的话, 只需要双击
 deb包就能安装了; 如果没有的话, 也可以在终端里面安装:
