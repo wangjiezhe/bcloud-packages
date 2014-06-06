@@ -36,3 +36,6 @@ Fedora 20的话, 请直接下载并安装bcloud-x.x..fc20.noarch.rpm, 它会自�
 
 #Gentoo安装
 可下载build_gentoo里的ebuild安装，也可下载bcloud-x.x.x.tbz2包安装. 使用中有任何问题请联系 MJsaka <qiuxuenan@gmail.com>. 
+
+另外 bcloud 已经被收录到[Gentoo-zh](https://github.com/microcai/gentoo-zh)
+仓库中, 有问题可联系[Liangzhaostrive@gmail.com](Liangzhaostrive@gmail.com).
