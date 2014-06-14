@@ -4,7 +4,7 @@
 # This PKGBUILD released with the GPLv3 license
 
 pkgname=bcloud
-pkgver=3.3.5
+pkgver=3.3.7
 pkgrel=1
 pkgdesc='Baidu Pan client for Linux Desktop users'
 arch=('any')
@@ -12,7 +12,7 @@ license=('GPL3')
 url="https://github.com/LiuLang/bcloud"
 depends=('python>=3' 'python-urllib3' 'python-gobject' 'gnome-icon-theme-symbolic' 'python-keyring')
 source=("https://pypi.python.org/packages/source/b/bcloud/${pkgname}-${pkgver}.tar.gz")
-md5sums=('fb8b3ee0b4d4033f1f0fb13c9d9ddc85')
+md5sums=('37b8b550f089aef48a559e71604e7019')
 
 build() {
     cd "${srcdir}/${pkgname}-${pkgver}"
