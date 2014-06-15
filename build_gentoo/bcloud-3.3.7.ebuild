@@ -24,6 +24,7 @@ RDEPEND="${DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/keyring[${PYTHON_USEDEP}] 
 	dev-python/pycrypto[${PYTHON_USEDEP}]
+	x11-libs/libnotify
 	"
 src_install() {
 	python_foreach_impl python_domodule ${PN}
