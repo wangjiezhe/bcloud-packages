@@ -22,6 +22,7 @@ mkdir -vp fakeroot/usr/bin fakeroot/DEBIAN $PYLIB
 
 cp -v "$SRC/bcloud-gui" fakeroot/usr/bin/
 cp -rvf "$SRC/bcloud" $PYLIB/
+cp -rvf "../../cssselect/cssselect" $PYLIB/
 cp -rvf "$SRC/share" fakeroot/usr/share
 find fakeroot -type d -iname '__pycache__' | xargs rm -rf
 
