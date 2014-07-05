@@ -1,5 +1,5 @@
 2c92827b0bdc71761658eb8980dec92e  bcloud-3.3.7-1-any.pkg.tar.xz
-dfcc84ca55e0902b14e03bc18ef960ff  bcloud-3.3.7-1.fc20.noarch.rpm
-88cff849c0441441a23bf0a78d11f3e8  bcloud-3.4.2-4.1.suse.noarch.rpm
 adf634d02ad5a98973d326cb01db4a31  bcloud-3.3.7.tbz2
+a7865e7a05bc29f8fa9a67df7f26ff50  bcloud-3.4.2-2.fc20.noarch.rpm
 b574527c93edc07204cdac93753274d4  bcloud_3.4.2-3_all.deb
+88cff849c0441441a23bf0a78d11f3e8  bcloud-3.4.2-4.1.suse.noarch.rpm
