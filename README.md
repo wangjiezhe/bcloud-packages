@@ -13,7 +13,7 @@
 deb包就能安装了; 如果没有的话, 也可以在终端里面安装:
 
     $ sudo dpkg -i bcloud-x.x.x.deb
-    $ sudo apt-get -f update
+    $ sudo apt-get -f install
 
 
 #Fedora系列
