@@ -30,9 +30,22 @@ Fedora 20的话, 请直接下载并安装bcloud-x.x..fc20.noarch.rpm, 它会自�
 + **注意事项**:
     + 使用`1 Click Install`安装方式，您以后可以直接从包管理器获得最近更新
 
-#Archlinux安装
+#Arch Linux安装
 
-+ 请先从AUR上安装python-keyring, 然后使用bcloud-x.x.x-any.pkg.tar.xz这个包
++ 请先下载 python-keyring-x.x.x-any.pkg.tar.xz 这个包进行安装, 然后下载 bcloud-x.x.x-any.pkg.tar.xz 这个包进行安装。
++ 或者下载 python-keyring-x.x.x-any.pkg.tar.xz 与 bcloud-x.x.x-any.pkg.tar.xz 这两个包同时安装。
++ 或者先从 [AUR](https://aur.archlinux.org/) 上下载 [python-keyring.tar.gz](https://aur.archlinux.org/packages/py/python-keyring/python-keyring.tar.gz) 进行编译安装，再下载 [bcloud.tar.gz](https://aur.archlinux.org/packages/bc/bcloud/bcloud.tar.gz) 进行编译安装。
++ 命令示例：
+
+```sh
+# 直接从本仓库下载安装
+$ sudo pacman -U python-keyring-x.x.x-any.pkg.tar.xz bcloud-x.x.x-any.pkg.tar.xz
+```
+
+```sh
+# 从 AUR 上下载编译安装(此处以 yaourt 作为示例)
+$ yaourt -S python-keyring bcloud
+```
 
 #Gentoo安装
 可下载build_gentoo里的ebuild安装，也可下载bcloud-x.x.x.tbz2包安装. 使用中有任何问题请联系 MJsaka <qiuxuenan@gmail.com>. 
