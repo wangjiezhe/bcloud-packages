@@ -32,19 +32,27 @@ Fedora 20的话, 请直接下载并安装bcloud-x.x..fc20.noarch.rpm, 它会自�
 
 #Arch Linux安装
 
-+ 请先下载 python-keyring-x.x.x-any.pkg.tar.xz 这个包进行安装, 然后下载 bcloud-x.x.x-any.pkg.tar.xz 这个包进行安装。
++ 请参考 [Firef0x 仓库主页](http://git.io/-1) 添加 [@Firef0x](http://git.io/fx) 的 Arch Linux 仓库，然后使用 pacman 直接安装。
 + 或者下载 python-keyring-x.x.x-any.pkg.tar.xz 与 bcloud-x.x.x-any.pkg.tar.xz 这两个包同时安装。
 + 或者先从 [AUR](https://aur.archlinux.org/) 上下载 [python-keyring.tar.gz](https://aur.archlinux.org/packages/py/python-keyring/python-keyring.tar.gz) 进行编译安装，再下载 [bcloud.tar.gz](https://aur.archlinux.org/packages/bc/bcloud/bcloud.tar.gz) 进行编译安装。
 + 命令示例：
 
 ```sh
-# 直接从本仓库下载安装
+# 示例1：从 Firef0x 的仓库安装
+$ sudo vim /etc/pacman.conf
+# 在 Vim 中编辑并添加仓库信息
+$ sudo pacman -Syy
+$ sudo pacman -S bcloud
+```
+
+```sh
+# 示例2：直接从本仓库下载安装
 $ sudo pacman -U python-keyring-x.x.x-any.pkg.tar.xz bcloud-x.x.x-any.pkg.tar.xz
 ```
 
 ```sh
-# 从 AUR 上下载编译安装(此处以 yaourt 作为示例)
-$ yaourt -S python-keyring bcloud
+# 示例3：从 AUR 上下载编译安装(此处以 yaourt 作为示例)
+$ yaourt -S bcloud
 ```
 
 #Gentoo安装
