@@ -17,8 +17,23 @@ deb包就能安装了; 如果没有的话, 也可以在终端里面安装:
 
 
 #Fedora系列
-Fedora 20的话, 请直接下载并安装bcloud-x.x..fc20.noarch.rpm, 它会自动解决所有
-依赖关系.
+如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
+
+```
+# dnf copr enable wangjiezhe/bcloud
+# dnf install bcloud
+```
+
+即可.
+
+或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/bcloud/> 下载对应的
+repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
+
+```
+# yum install bcloud
+```
+
+打包脚本在 build\_rpm 里.
 
 #OpenSuSE安装指南
 **适用于13.1、Factory以及Tumbleweed**
