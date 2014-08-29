@@ -9,7 +9,7 @@
 
 Name:           bcloud
 Version:        3.4.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Baidu Pan client for Linux Desktop users
 
 License:        GPLv3
