@@ -1,6 +1,5 @@
-a011d1753f82d6ef56a7920de6a6dbdd  python-keyring-3.8-1-any.pkg.tar.xz
 907af959e2bd26a492f48d25e94a2c02  bcloud-3.4.2-2-any.pkg.tar.xz
-692e17c5ca93f89bc948e16079648dff  bcloud-3.4.2.tbz2
-b574527c93edc07204cdac93753274d4  bcloud_3.4.2-3_all.deb
-88cff849c0441441a23bf0a78d11f3e8  bcloud-3.4.2-4.1.suse.noarch.rpm
 d232d134df3ed22f67d7c9760ae454b2  bcloud-3.4.2-3.fc20.noarch.rpm
+88cff849c0441441a23bf0a78d11f3e8  bcloud-3.4.2-4.1.suse.noarch.rpm
+692e17c5ca93f89bc948e16079648dff  bcloud-3.4.2.tbz2
+103c2c69ceda318ea4ff1e160969a535  bcloud_3.5.1-1_all.deb
