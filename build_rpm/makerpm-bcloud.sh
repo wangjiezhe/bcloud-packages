@@ -33,6 +33,7 @@ DEST="$HOME"/Downloads/github/wangjiezhe/bcloud-packages
 SOURCES="$HOME"/rpmbuild/SOURCES
 SPECS="$HOME"/rpmbuild/SPECS
 RPMS="$HOME"/rpmbuild/RPMS/noarch
+SRPMS="$HOME"/rpmbuild/SRPMS
 
 if [ ! -f "$SPECS"/bcloud.spec ]
 then
@@ -61,5 +62,5 @@ rpmbuild -ba bcloud.spec
 cp bcloud.spec "$DEST"/build_rpm/
 # cp makerpm-bcloud.sh "$DEST"/build_rpm/
 
-cd "$RPMS"/
-cp bcloud-"$version"-"$release".fc20.noarch.rpm "$DEST"/
+cp "$RPMS"/bcloud-"$version"-"$release".fc20.noarch.rpm "$DEST"/
+cp "$SRPMS"/bcloud-"$version"-"$release".fc20.src.rpm "$DEST"/build_rpm
