@@ -47,28 +47,23 @@ repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
 #Arch Linux安装
 
-+ 请参考 [Firef0x 仓库主页](http://git.io/-1) 添加 [@Firef0x](http://git.io/fx) 的 Arch Linux 仓库，然后使用 pacman 直接安装。
-+ 或者下载 python-keyring-x.x.x-any.pkg.tar.xz 与 bcloud-x.x.x-any.pkg.tar.xz 这两个包同时安装。
-+ 或者先从 [AUR](https://aur.archlinux.org/) 上下载 [python-keyring.tar.gz](https://aur.archlinux.org/packages/py/python-keyring/python-keyring.tar.gz) 进行编译安装，再下载 [bcloud.tar.gz](https://aur.archlinux.org/packages/bc/bcloud/bcloud.tar.gz) 进行编译安装。
++ 使用 pacman 直接安装 [bcloud](https://www.archlinux.org/packages/community/any/bcloud/) 。
 + 命令示例：
 
 ```sh
-# 示例1：从 Firef0x 的仓库安装
-$ sudo vim /etc/pacman.conf
-# 在 Vim 中编辑并添加仓库信息
-$ sudo pacman -Syy
+$ sudo pacman -Syu (或者 sudo pacman -Syy，如果愿意的话)
 $ sudo pacman -S bcloud
 ```
 
-```sh
-# 示例2：直接从本仓库下载安装
-$ sudo pacman -U python-keyring-x.x.x-any.pkg.tar.xz bcloud-x.x.x-any.pkg.tar.xz
-```
++ 可选步骤：
+    + 如果需要加密本地存储的密码，请使用 pacman 安装 [python-crypto](https://www.archlinux.org/packages/extra/x86_64/python-crypto/) ：
 
 ```sh
-# 示例3：从 AUR 上下载编译安装(此处以 yaourt 作为示例)
-$ yaourt -S bcloud
+$ sudo pacman -S python-crypto
 ```
+
++ **注意事项**:
+    + 如果发现 [bcloud](https://www.archlinux.org/packages/community/any/bcloud/) 并非最新版本，请访问 [Flag Package: bcloud](https://www.archlinux.org/packages/community/any/bcloud/flag/) 页面报告问题，官方维护者将会尽快更新至最新版本。
 
 #Gentoo安装
 可下载build_gentoo里的ebuild安装，也可下载bcloud-x.x.x.tbz2包安装. 使用中有任何问题请联系 MJsaka <qiuxuenan@gmail.com>. 
