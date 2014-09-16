@@ -36,7 +36,7 @@ repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 打包脚本在 build\_rpm 里.
 
 #OpenSuSE安装指南
-**适用于13.1、Factory以及Tumbleweed**
+**BCloud现在在OpenSuSE中文源中也可用啦。若您添加了`opensuse_zh`源，可直接在源中搜索`bcloud`，跳过下面的步骤**
 
 + [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
 + [1 Click Install for Tumbleweed](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_Tumbleweed/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
