@@ -27,6 +27,7 @@ Requires:  python3-dbus
 Requires:  libnotify
 Requires:  python3-crypto
 Requires:  python3-lxml
+Requires:  python3-cssselect
 
 %description
 
