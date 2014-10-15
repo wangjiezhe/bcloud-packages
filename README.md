@@ -8,15 +8,16 @@
 包的MD5值, 与 [checksum.txt](checksum.txt) 里面的文件MD5值比较, 如果匹配就
 没有问题.
 
-#Debian系列
+#Debian 安装指南
 请直接下载bcloud-x.x.x.deb这个包, 安装时如果系统里面有gdebi的话, 只需要双击
 deb包就能安装了; 如果没有的话, 也可以在终端里面安装:
 
-    $ sudo dpkg -i bcloud-x.x.x.deb
-    $ sudo apt-get -f install
+```sh
+$ sudo dpkg -i bcloud-x.x.x.deb
+$ sudo apt-get -f install
+```
 
-
-#Fedora系列
+#Fedora 安装指南
 如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
 
 ```
@@ -35,7 +36,16 @@ repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
 打包脚本在 build\_rpm 里.
 
-#OpenSuSE安装指南
+#RHEL 7 安装指南
+RHEL / CentOS 7 使用如下命令安装 bcloud:
+
+```sh
+# yum-config-manager --add-repo=https://copr.fedoraproject.org/coprs/mosquito/myrepo/repo/epel-$(rpm -E %?rhel)/mosquito-myrepo-epel-$(rpm -E %?rhel).repo
+# yum localinstall http://li.nux.ro/download/nux/dextop/el$(rpm -E %rhel)/x86_64/nux-dextop-release-0-2.el$(rpm -E %rhel).nux.noarch.rpm
+# yum install bcloud
+```
+
+#OpenSuSE 安装指南
 **BCloud现在在OpenSuSE中文源中也可用啦。若您添加了`opensuse_zh`源，可直接在源中搜索`bcloud`，跳过下面的步骤**
 
 + [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
@@ -45,7 +55,7 @@ repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 + **注意事项**:
     + 使用`1 Click Install`安装方式，您以后可以直接从包管理器获得最近更新
 
-#Arch Linux安装
+#Arch Linux 安装指南
 
 + 使用 pacman 直接安装 [bcloud](https://www.archlinux.org/packages/community/any/bcloud/) 。
 + 命令示例：
@@ -65,7 +75,7 @@ $ sudo pacman -S python-crypto
 + **注意事项**:
     + 如果发现 [bcloud](https://www.archlinux.org/packages/community/any/bcloud/) 并非最新版本，请访问 [Flag Package: bcloud](https://www.archlinux.org/packages/community/any/bcloud/flag/) 页面报告问题，官方维护者将会尽快更新至最新版本。
 
-#Gentoo安装
+#Gentoo 安装指南
 可下载build_gentoo里的ebuild安装，也可下载bcloud-x.x.x.tbz2包安装. 使用中有任何问题请联系 MJsaka <qiuxuenan@gmail.com>. 
 
 另外 bcloud 已经被收录到[Gentoo-zh](https://github.com/microcai/gentoo-zh)
