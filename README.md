@@ -9,8 +9,9 @@
 没有问题.
 
 #Debian 安装指南
-请直接下载bcloud-x.x.x.deb这个包, 安装时如果系统里面有gdebi的话, 只需要双击
-deb包就能安装了; 如果没有的话, 也可以在终端里面安装:
+请直接下载bcloud-x.x.x.deb这个包, 然后双击deb包就能安装了;
+
+有些用户并没有安装apt包管理器的GUI界面, 也可以在终端里面安装:
 
 ```sh
 $ sudo dpkg -i bcloud-x.x.x.deb
