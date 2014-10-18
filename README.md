@@ -18,6 +18,22 @@ $ sudo dpkg -i bcloud-x.x.x.deb
 $ sudo apt-get -f install
 ```
 
+#Ubuntu 12.04 安装指南
+由于ubuntu12.04里面的包非常旧, 在把bcloud的deb包安装好之后, 并不能直接使用, 需
+要手动更新一下里面的两个模块, 下面的介绍是以新安装的ubuntu12.04.5为基础的:
+
+1.更新软件包索引: `$ sudo apt-get update`
+
+2.安装python3-dev, 在安装python3-crypto里有用: `$ sudo apt-get install python3-dev`
+3.安装pip3, 如果你之前没有安装的话: `$ sudo apt-get install python3-setuptools; $ sudo easy_install3 install pip`
+
+4.更新python3-crypto到v2.6.1, 因为ubuntu系统里面的是v2.4, 里面的RSA功能不完整: `$ sudo pip3 install --upgrade pycrypto`
+
+5.更新python3-keyring到v4.0, ubuntu系统里的是v0.7: `$ sudo pip3 install --upgrade keyring`
+
+更新好这些组件之后, bcloud就可以正常使用了.
+
+
 #Fedora 安装指南
 如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
 
