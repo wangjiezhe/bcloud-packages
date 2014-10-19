@@ -24,7 +24,8 @@ $ sudo apt-get -f install
 
 1.更新软件包索引: `$ sudo apt-get update`
 
-2.安装python3-dev, 在安装python3-crypto里有用: `$ sudo apt-get install python3-dev`
+2.安装python3-dev, 在安装python3-crypto时有用: `$ sudo apt-get install python3-dev`
+
 3.安装pip3, 如果你之前没有安装的话: `$ sudo apt-get install python3-setuptools; $ sudo easy_install3 install pip`
 
 4.更新python3-crypto到v2.6.1, 因为ubuntu系统里面的是v2.4, 里面的RSA功能不完整: `$ sudo pip3 install --upgrade pycrypto`
