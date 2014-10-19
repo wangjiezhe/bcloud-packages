@@ -93,6 +93,7 @@ $ sudo pacman -S python-crypto
 
 + **注意事项**:
     + 如果发现 [bcloud](https://www.archlinux.org/packages/community/any/bcloud/) 并非最新版本，请访问 [Flag Package: bcloud](https://www.archlinux.org/packages/community/any/bcloud/flag/) 页面报告问题，官方维护者将会尽快更新至最新版本。
+    + Arch用户需要手动配置gnome-keyring, 请阅读这两篇文章:[GNOME_Keyring](https://wiki.archlinux.org/index.php/GNOME_Keyring), [GnomeKeyring#Automatic_Unlocking](https://wiki.gnome.org/action/show/Projects/GnomeKeyring?action=show&redirect=GnomeKeyring#Automatic_Unlocking)
 
 #Gentoo 安装指南
 可下载build_gentoo里的ebuild安装，也可下载bcloud-x.x.x.tbz2包安装. 使用中有任何问题请联系 MJsaka <qiuxuenan@gmail.com>. 
