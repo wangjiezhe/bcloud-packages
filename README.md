@@ -9,7 +9,8 @@
 没有问题.
 
 #Debian 安装指南
-请直接下载bcloud-x.x.x.deb这个包, 然后双击deb包就能安装了;
+Debian及基于Debian的发行版(比如ubuntu, linuxmint)请直接下载
+bcloud-x.x.x.deb这个包, 然后双击deb包就能安装了;
 
 有些用户并没有安装apt包管理器的GUI界面, 也可以在终端里面安装:
 
@@ -29,7 +30,8 @@ $ sudo apt-get -f install
 
 3.安装pip3, 如果你之前没有安装的话: `$ sudo apt-get install python3-setuptools; $ sudo easy_install3 pip`
 
-4.更新python3-crypto到v2.6.1, 因为ubuntu系统里面的是v2.4, 里面的RSA功能不完整: `$ sudo pip3 install --upgrade pycrypto`
+4.更新python3-crypto到v2.6.1, 因为ubuntu系统里面的是v2.4, 里面的RSA模块功能不
+完整: `$ sudo pip3 install --upgrade pycrypto`
 
 5.更新python3-keyring到v4.0, ubuntu系统里的是v0.7: `$ sudo pip3 install --upgrade keyring`
 
@@ -100,3 +102,24 @@ $ sudo pacman -S python-crypto
 
 另外 bcloud 已经被收录到[Gentoo-zh](https://github.com/microcai/gentoo-zh)
 仓库中, 有问题可联系[Liangzhaostrive@gmail.com](Liangzhaostrive@gmail.com).
+
+
+手动安装
+========
+如果需要手动安装的话, 也可以用`pip3`(ArchLinux里面是`pip`)来安装,
+比如: `# pip3 install bcloud`
+
+但要确保已经安装了以下依赖包:
+
+* python3-gi  Gtk3 的 python3 绑定, Fedora里面的名称是python3-gobject.
+* gir1.2-gtk-3.0, gtk3界面的gir动态绑定.
+* gnome-icon-theme-symbolic Gnome3 提供的一套按钮图标.
+* python3-keyring  这个模块是推荐安装的, 用于把帐户的密码存放到gnome-keyring或
+kwallet里面.
+* gnome-keyring或者kwalletmanager, 用于托管用户密码
+* python3-dbus  dbus的python3绑定.
+* python3-lxml 强大的XML解析器, 可以在[这里](https://pypi.python.org/pypi/lxml)下载.
+* python3-cssselect CSS3 属性选择器, 在[这里](https://pypi.python.org/pypi/cssselect).
+* python3-crypto  使用RSA算法加密用户密码.
+* gir1.2-notify 这个用于显示桌面消息通知.
+
