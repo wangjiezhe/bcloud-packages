@@ -19,6 +19,9 @@ $ sudo dpkg -i bcloud-x.x.x.deb
 $ sudo apt-get -f install
 ```
 
+#Debian 7 安装指南
+Debian 7里面有一个软件包需要手动升级到较新版, `# pip3 install --upgrade keyring`
+
 #Ubuntu 12.04 安装指南
 由于ubuntu12.04里面的包非常旧, 在把bcloud的deb包安装好之后, 并不能直接使用,
 会出现类似于[issue65](https://github.com/LiuLang/bcloud/issues/65)中的错误,
