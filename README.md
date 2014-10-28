@@ -89,13 +89,6 @@ $ sudo pacman -Syu (或者 sudo pacman -Syy，如果愿意的话)
 $ sudo pacman -S bcloud
 ```
 
-+ 可选步骤：
-    + 如果需要加密本地存储的密码，请使用 pacman 安装 [python-crypto](https://www.archlinux.org/packages/extra/x86_64/python-crypto/) ：
-
-```sh
-$ sudo pacman -S python-crypto
-```
-
 + **注意事项**:
     + 如果发现 [bcloud](https://www.archlinux.org/packages/community/any/bcloud/) 并非最新版本，请访问 [Flag Package: bcloud](https://www.archlinux.org/packages/community/any/bcloud/flag/) 页面报告问题，官方维护者将会尽快更新至最新版本。
     + Arch用户需要手动配置gnome-keyring, 请阅读这两篇文章:[GNOME_Keyring](https://wiki.archlinux.org/index.php/GNOME_Keyring), [GnomeKeyring#Automatic_Unlocking](https://wiki.gnome.org/action/show/Projects/GnomeKeyring?action=show&redirect=GnomeKeyring#Automatic_Unlocking)
