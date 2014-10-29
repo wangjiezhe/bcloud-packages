@@ -3,7 +3,7 @@ Version: 3.5.6-3
 Architecture: all
 Maintainer: LiuLang<gsushzhsosgsu@gmail.com>
 Installed-Size: 756
-Depends: libgtk-3-0, gir1.2-gtk-3.0, python3-gi, python3-dbus, gnome-icon-theme-symbolic, adwaita-icon-theme, libnotify4, gir1.2-notify-0.7, python3-keyring, python3-crypto, python3-lxml, gnome-keyring|kwalletmanager
+Depends: libgtk-3-0, gir1.2-gtk-3.0, python3-gi, python3-dbus, gnome-icon-theme-symbolic, libnotify4, gir1.2-notify-0.7, python3-keyring, python3-crypto, python3-lxml, gnome-keyring|kwalletmanager
 Section: gnome
 Priority: optional
 Homepage: https://github.com/LiuLang/bcloud
