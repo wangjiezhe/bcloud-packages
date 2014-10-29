@@ -110,6 +110,7 @@ $ sudo pacman -S bcloud
 * python3-gi  Gtk3 的 python3 绑定, Fedora里面的名称是python3-gobject.
 * gir1.2-gtk-3.0, gtk3界面的gir动态绑定.
 * gnome-icon-theme-symbolic Gnome3 提供的一套按钮图标.
+* adwaita-icon-theme gtk3默认主题引擎提供的一套图标.
 * python3-keyring  这个模块是推荐安装的, 用于把帐户的密码存放到gnome-keyring或
 kwallet里面.
 * gnome-keyring或者kwalletmanager, 用于托管用户密码
