@@ -70,7 +70,7 @@ RHEL / CentOS 7 使用如下命令安装 bcloud:
 ```
 
 #OpenSuSE 安装指南
-**BCloud现在在OpenSuSE中文源中也可用啦。若您添加了`opensuse_zh`源，可直接在源中搜索`bcloud`，跳过下面的步骤(版本肯能更老)**
+**BCloud现在在OpenSuSE中文源中也可用啦。若您添加了`opensuse_zh`源，可直接在源中搜索`bcloud`，跳过下面的步骤(版本可能更老)**
 
 + [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
 + [1 Click Install for 13.2](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.2/bcloud.ymp?base=openSUSE%3A13.2&query=bcloud)
