@@ -44,7 +44,7 @@ Debian 7里面有一个软件包需要手动升级到较新版, `# pip3 install 
 #Fedora 安装指南
 如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
 
-```
+```sh
 # dnf copr enable wangjiezhe/bcloud
 # dnf install bcloud
 ```
@@ -54,7 +54,7 @@ Debian 7里面有一个软件包需要手动升级到较新版, `# pip3 install 
 或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/bcloud/> 下载对应的
 repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
-```
+```sh
 # yum install bcloud
 ```
 
@@ -102,22 +102,23 @@ $ sudo pacman -S bcloud
 仓库中, 有问题可联系[Liangzhaostrive@gmail.com](Liangzhaostrive@gmail.com).
 
 
-手动安装
-========
+#依赖关系
 如果需要手动安装的话, 也可以用`pip3`(ArchLinux里面是`pip`)来安装,
 比如: `# pip3 install bcloud`
 
-但要确保已经安装了以下依赖包:
+需要包含这些软件包:
 
-* python3-gi  Gtk3 的 python3 绑定, Fedora里面的名称是python3-gobject.
-* gir1.2-gtk-3.0, gtk3界面的gir动态绑定.
-* gnome-icon-theme-symbolic Gnome3 提供的一套按钮图标.
-* python3-keyring  这个模块是推荐安装的, 用于把帐户的密码存放到gnome-keyring或
-kwallet里面.
+* gir1.2-gtk-3.0
+* gir1.2-notify-0.7
+* gnome-icon-theme-symbolic Gnome3 提供的一套按钮图标
 * gnome-keyring或者kwalletmanager, 用于托管用户密码
-* python3-dbus  dbus的python3绑定.
-* python3-lxml 强大的XML解析器, 可以在[这里](https://pypi.python.org/pypi/lxml)下载.
-* python3-cssselect CSS3 属性选择器, 在[这里](https://pypi.python.org/pypi/cssselect).
-* python3-crypto  使用RSA算法加密用户密码.
-* gir1.2-notify 这个用于显示桌面消息通知.
-
+* libgtk-3.0
+* libnotifiy4
+* notification-daemon
+* python3-crypto  使用RSA算法加密用户密码
+* python3-cssselect CSS3 属性选择器, 在[这里](https://pypi.python.org/pypi/cssselect)
+* python3-dbus  dbus的python3绑定
+* python3-gi  Gtk3 的 python3 绑定
+* python3-keyring  这个模块是推荐安装的, 用于把帐户的密码存放到gnome-keyring或
+kwallet里面
+* python3-lxml 强大的XML解析器, 可以在[这里](https://pypi.python.org/pypi/lxml)下载
