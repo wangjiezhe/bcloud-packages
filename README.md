@@ -72,10 +72,10 @@ RHEL / CentOS 7 使用如下命令安装 bcloud:
 #OpenSuSE 安装指南
 **BCloud现在在OpenSuSE中文源中也可用啦。若您添加了`opensuse_zh`源，可直接在源中搜索`bcloud`，跳过下面的步骤(版本可能更老)**
 
-+ [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
-+ [1 Click Install for 13.2](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.2/bcloud.ymp?base=openSUSE%3A13.2&query=bcloud)
-+ [1 Click Install for Tumbleweed](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_Tumbleweed/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
-+ [1 Click Install for Factory](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_Factory/bcloud.ymp?base=openSUSE%3AFactory&query=bcloud)
++ [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
++ [1 Click Install for 13.2](http://software.opensuse.org/ymp/home:qgymib/openSUSE_13.2/bcloud.ymp?base=openSUSE%3A13.2&query=bcloud)
++ [1 Click Install for Tumbleweed](http://software.opensuse.org/ymp/home:qgymib/openSUSE_Tumbleweed/bcloud.ymp?base=openSUSE%3AFactory&query=bcloud)
++ [1 Click Install for Factory](http://software.opensuse.org/ymp/home:qgymib/openSUSE_Factory/bcloud.ymp?base=openSUSE%3AFactory&query=bcloud)
 + (不推荐)手动安装：请先安装`python3-keyring.suse.rpm`, 再安装`bcloud.suse.rpm`
 + **注意事项**:
     + 使用`1 Click Install`安装方式，您以后可以直接从包管理器获得最近更新
