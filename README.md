@@ -42,16 +42,15 @@ Debian 7里面有一个软件包需要手动升级到较新版, `# pip3 install 
 
 
 #Fedora 安装指南
-如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
+执行以下命令安装 bcloud, 目前支持 fc19, fc20, fc21, fc22 :
 
 ```sh
-# dnf copr enable wangjiezhe/bcloud
+# yum install dnf-plugins-core
+# dnf copr enable mosquito/myrepo
 # dnf install bcloud
 ```
 
-即可.
-
-或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/bcloud/> 下载对应的
+或者直接到 [myrepo](http://copr.fedoraproject.org/coprs/mosquito/myrepo/) 下载对应的
 repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
 ```sh
