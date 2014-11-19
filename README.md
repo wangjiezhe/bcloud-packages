@@ -42,16 +42,15 @@ Debian 7里面有一个软件包需要手动升级到较新版, `# pip3 install 
 
 
 #Fedora 安装指南
-如果你使用 dnf 并安装了 dnf-plugins-core, 直接运行:
+执行以下命令安装 bcloud, 目前支持 fc19, fc20, fc21, fc22 :
 
 ```sh
-# dnf copr enable wangjiezhe/bcloud
+# yum install dnf-plugins-core
+# dnf copr enable mosquito/myrepo
 # dnf install bcloud
 ```
 
-即可.
-
-或者直接到 <http://copr.fedoraproject.org/coprs/wangjiezhe/bcloud/> 下载对应的
+或者直接到 [myrepo](http://copr.fedoraproject.org/coprs/mosquito/myrepo/) 下载对应的
 repo 文件放到 /etc/yum.repos.d/ 中, 然后运行
 
 ```sh
@@ -72,10 +71,10 @@ RHEL / CentOS 7 使用如下命令安装 bcloud:
 #OpenSuSE 安装指南
 **BCloud现在在OpenSuSE中文源中也可用啦。若您添加了`opensuse_zh`源，可直接在源中搜索`bcloud`，跳过下面的步骤(版本可能更老)**
 
-+ [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
-+ [1 Click Install for 13.2](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_13.2/bcloud.ymp?base=openSUSE%3A13.2&query=bcloud)
-+ [1 Click Install for Tumbleweed](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_Tumbleweed/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
-+ [1 Click Install for Factory](http://software.opensuse.org/ymp/home:qgymib:bcloud/openSUSE_Factory/bcloud.ymp?base=openSUSE%3AFactory&query=bcloud)
++ [1 Click Install for 13.1](http://software.opensuse.org/ymp/home:qgymib/openSUSE_13.1/bcloud.ymp?base=openSUSE%3A13.1&query=bcloud)
++ [1 Click Install for 13.2](http://software.opensuse.org/ymp/home:qgymib/openSUSE_13.2/bcloud.ymp?base=openSUSE%3A13.2&query=bcloud)
++ [1 Click Install for Tumbleweed](http://software.opensuse.org/ymp/home:qgymib/openSUSE_Tumbleweed/bcloud.ymp?base=openSUSE%3AFactory&query=bcloud)
++ [1 Click Install for Factory](http://software.opensuse.org/ymp/home:qgymib/openSUSE_Factory/bcloud.ymp?base=openSUSE%3AFactory&query=bcloud)
 + (不推荐)手动安装：请先安装`python3-keyring.suse.rpm`, 再安装`bcloud.suse.rpm`
 + **注意事项**:
     + 使用`1 Click Install`安装方式，您以后可以直接从包管理器获得最近更新
